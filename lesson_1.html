@@ -1017,17 +1017,28 @@ body .markdown-body
 </style><title>lesson_1</title></head><body><article class="markdown-body"><h1 id="1"><a name="user-content-1" href="#1" class="headeranchor-link" aria-hidden="true"><span class="headeranchor"></span></a>Урок 1</h1>
 <p>В этом уроке мы заново вспомним все, проходили до сих пор</p>
 <ul>
+<li><a href="">Комментарии в коде</a></li>
 <li><a href="">Переменные</a></li>
 <li><a href="">Условные операторы</a></li>
 <li><a href="">Функции</a></li>
 <li><a href="">Массивы</a></li>
 </ul>
-<h2 id="_1"><a name="user-content-_1" href="#_1" class="headeranchor-link" aria-hidden="true"><span class="headeranchor"></span></a>Переменные</h2>
+<h2 id="_1"><a name="user-content-_1" href="#_1" class="headeranchor-link" aria-hidden="true"><span class="headeranchor"></span></a>Комментарии в коде</h2>
+<p>Порой нужно написать что-то в коде программы, чтобы потом было понятно &ldquo;а что же я имел ввиду, когда писал это&rdquo;. Для этого служат комментарии. Они не воспринимаются программой и созданы только для нас – программистов.</p>
+<p>Пример:<br />
+<pre><code class="java">// Вот это строчный комментарий. Можно писать все, что угодно, но только на одной строке. Если нажать enter - комментарий закончиться
+/*
+   А вот это блочный комментарий. 
+   Все, что между звездочек – это блок, в котором может быть более одной строки
+   Аллах - велик. (еще одна строка, показывающая суть блочного комментария)
+*/
+</code></pre></p>
+<h2 id="_2"><a name="user-content-_2" href="#_2" class="headeranchor-link" aria-hidden="true"><span class="headeranchor"></span></a>Переменные</h2>
 <p>Переменную можно воспринимать как некую сущность, задача которой - хранить значение.</p>
 <p>Рассмотрим пример: у нас есть 3 кота, и 6 игрушек. Допустим, мы будем делать какие-то операции с этими котами (нет, не медицинские), и нам эти значения понадобятся. Конечно, мы можем каждый раз, когда нам, скажем, потребуется количество котов, заново руками указывать число 3, но это не эффективно (банально потому, что займет у нас время) и вызовет некоторые проблемы, если, вдруг, у нас появится еще один кот: прийдется идти по коду (лол, кот-код) и во всех (и это если еще найдешь все! Если нет – так еще и пару багов в программес сделаешь) местах менять 3 на 4.</p>
 <p>Не круто, а вот если мы создадим 2 переменные, к примеру, <code>catsNumber</code> и <code>catToysNumber</code> – наша жизнь сразу становится проще, так как мы значение, если потребуется, поменяем всего 1 раз, и оно автоматически будет другим по всему коду.</p>
 <p>Java - строго типизированный яп (язык программирования). Поэтому, для каждой переменной мы должны явно указывать ее тип. </p>
-<h3 id="_2"><a name="user-content-_2" href="#_2" class="headeranchor-link" aria-hidden="true"><span class="headeranchor"></span></a>Основные типы данных</h3>
+<h3 id="_3"><a name="user-content-_3" href="#_3" class="headeranchor-link" aria-hidden="true"><span class="headeranchor"></span></a>Основные типы данных</h3>
 <table>
 <thead>
 <tr>
@@ -1067,7 +1078,7 @@ body .markdown-body
 <blockquote>
 <p>Ключевые слова надо запомнить как правило и уметь применять. Когда стоит вопрос выбора типа данных для новой переменной, надо для себя понять: какие значения она может принимать (к примеру, если это сообщения для чата, то логично, что переменная не может быть типа <code>int</code>, ввиду того, что в сообщении могут быть и буквы). На основании этого ответа можно смело писать тип.</p>
 </blockquote>
-<h3 id="_3"><a name="user-content-_3" href="#_3" class="headeranchor-link" aria-hidden="true"><span class="headeranchor"></span></a>Основные характеристики переменной</h3>
+<h3 id="_4"><a name="user-content-_4" href="#_4" class="headeranchor-link" aria-hidden="true"><span class="headeranchor"></span></a>Основные характеристики переменной</h3>
 <p>Основных всего 2: <code>тип</code> и <code>имя</code>.</p>
 <p><code>тип</code> – ключевое слово (скажем, <code>int</code>), соответсвующее тому типу данных, которое мы хотим использовать. К примеру, мы хотим хранить число пальцев на руке, поэтому тип такой переменной – целочисленное число, и ключевое слово – <code>int</code>.<br />
 <code>имя</code> – имя переменной, которое может быть любым (даже на любом языке, но в Java принято все писать на Английском (ух пиндосы&hellip;)). Имя – <strong>уникальный ключ</strong>, по которому программа понимает &ldquo;а какую же переменную мы хотим&rdquo;: &ldquo;я хочу получить значение переменной, с <code>именем</code> равным <code>жжепа</code>&rdquo; – если бы имени не было, то у программы возник закономерный вопрос: а какую ты переменную то хочешь, э, поц?</p>
@@ -1081,7 +1092,7 @@ body .markdown-body
 <blockquote>
 <p>В дальнейшем мы узнаем, что некоторые типы данных инициализируют переменные &ldquo;из коробки&rdquo; (на самом деле, все примитивные типы данных), но на текущий момент надо просто запомнить, что &ldquo;объявление&rdquo; и &ldquo;инициализация&rdquo; – совсем разные вещи. </p>
 </blockquote>
-<h3 id="_4"><a name="user-content-_4" href="#_4" class="headeranchor-link" aria-hidden="true"><span class="headeranchor"></span></a>Синтаксис?</h3>
+<h3 id="_5"><a name="user-content-_5" href="#_5" class="headeranchor-link" aria-hidden="true"><span class="headeranchor"></span></a>Синтаксис?</h3>
 <p>Синтаксис (в любом языке, не только программирования) – набор правил для правильного написания чего бы то ни было. В нашем случае, нас интересует синтаксис, связанный с переменными.</p>
 <p>Он прост:</p>
 <pre><code class="java">ключевое_слово_для_типа_данных имя_переменной = значение;
@@ -1094,7 +1105,7 @@ String myName = &quot;Georgii&quot;;
 </code></pre>
 
 <p>Как мы уже и сказали, есть объявление и инициализация переменной.</p>
-<h4 id="_5"><a name="user-content-_5" href="#_5" class="headeranchor-link" aria-hidden="true"><span class="headeranchor"></span></a>Объявление переменной</h4>
+<h4 id="_6"><a name="user-content-_6" href="#_6" class="headeranchor-link" aria-hidden="true"><span class="headeranchor"></span></a>Объявление переменной</h4>
 <pre><code class="java">ключевое_слово_для_типа_данных имя_переменной;
 </code></pre>
 
@@ -1104,7 +1115,7 @@ double myHeight;
 String myName;
 </code></pre><br />
 Таким образом, мы как бы говорим программе, &ldquo;я хочу, чтобы у меня была переменная с именем <code>myAge</code>, в которую можно положить какие-то данные, типа &ldquo;целочисленное число&rdquo;(ключевое слово <code>int</code>)&rdquo;. Из этого тексового описания понятно, что собственно значение переменной мы и не указали. Какой мой возраст? Для этого служит <code>инициализаия</code>, но важно понимать, что мы можем и не указывать значение переменной, оставив это на потом.</p>
-<h4 id="_6"><a name="user-content-_6" href="#_6" class="headeranchor-link" aria-hidden="true"><span class="headeranchor"></span></a>Инициализация</h4>
+<h4 id="_7"><a name="user-content-_7" href="#_7" class="headeranchor-link" aria-hidden="true"><span class="headeranchor"></span></a>Инициализация</h4>
 <p>Инициализация – это все то, что после знака равно, при первом упоминании переменной. Инициализацию можно объединять с объявлением, как мы и сделали в <a href="">Пример 1</a>, так и раздельно:</p>
 <p>Пример 3:<br />
 <pre><code class="java">int myAge; // объявление
@@ -1112,19 +1123,161 @@ myAge = 19; // инициализация
 
 double myHeight = 1.82 // объявление и инициализация (одной строкой, да)
 </code></pre></p>
-<h3 id="_7"><a name="user-content-_7" href="#_7" class="headeranchor-link" aria-hidden="true"><span class="headeranchor"></span></a>Конфликт типов</h3>
+<h3 id="_8"><a name="user-content-_8" href="#_8" class="headeranchor-link" aria-hidden="true"><span class="headeranchor"></span></a>Конфликт типов</h3>
 <p>Как было ранее сказано, Java - строго типизированный язык. Если мы создали целочисленную переменную, то ее значением может быть только целое число. Если мы присвоим другое значение – будет ошибка!</p>
 <p>Пример 4:</p>
-<h3 id="_8"><a name="user-content-_8" href="#_8" class="headeranchor-link" aria-hidden="true"><span class="headeranchor"></span></a>Получение значения переменной</h3>
-<p>Чтобы получить значение переменной, надо убедиться, что она существует и просто указать ее по имени:</p>
-<p>Пример 4:<br />
+<pre><code class="java">int a = 1.32; // Ошибка! Разные типы: `int` и `double`
+</code></pre>
+
+<h3 id="_9"><a name="user-content-_9" href="#_9" class="headeranchor-link" aria-hidden="true"><span class="headeranchor"></span></a>Получение значения переменной</h3>
+<p>Чтобы получить значение переменной (обратиться к ней), надо убедиться, что она существует и просто указать ее по имени:</p>
+<p>Пример 5:<br />
 <pre><code class="java">int a = 10;
 a // Значение: 10
 </code></pre></p>
 <p>Значение переменной можно &ldquo;положить&rdquo; (присвоить) в другую переменную:</p>
-<p>Пример 5:</p>
+<p>Пример 6:</p>
 <pre><code class="java">int a = 10;
 int b = a; // Значение: 10
 </code></pre>
 
-<h3 id="_9"><a name="user-content-_9" href="#_9" class="headeranchor-link" aria-hidden="true"><span class="headeranchor"></span></a>Изменение значения переменной</h3></article></body></html>
+<h3 id="_10"><a name="user-content-_10" href="#_10" class="headeranchor-link" aria-hidden="true"><span class="headeranchor"></span></a>Изменение значения переменной</h3>
+<p>Красиво назывется &ldquo;присвоением значения&rdquo;, или просто &ldquo;присвоение&rdquo;. Имеет простой синтаксис:</p>
+<p><code>имя_переменной = новое_значение</code></p>
+<p>Пример 7: <br />
+<pre><code class="java">int a = 1; // Объявление и инициализация
+a = 15; // Присвоение нового значения
+</code></pre></p>
+<h3 id="_11"><a name="user-content-_11" href="#_11" class="headeranchor-link" aria-hidden="true"><span class="headeranchor"></span></a>Сравнение переменных</h3>
+<p>Это достаточно общирная тема, но на сегоднящний день надо знать вот что</p>
+<h4 id="_12"><a name="user-content-_12" href="#_12" class="headeranchor-link" aria-hidden="true"><span class="headeranchor"></span></a>Оператор сравненния &ldquo;равен&rdquo;</h4>
+<p><code>значение_1 == значение_2</code> - оператор сравнения в Java. Дословно читается как &ldquo;равен&rdquo;. Противоположный ему по смыслу оператор &ldquo;не равен&rdquo; – <code>значение_1 != значение_2</code>.</p>
+<p>Результатом применения такого оператора будет <code>boolean</code> значение</p>
+<blockquote>
+<p>Очень важно понмиать, что <code>==</code> – сравнение, а <code>=</code> – присвоение.</p>
+</blockquote>
+<p>Пример 8:<br />
+<pre><code class="java">int a = 1;
+int b = 2;
+
+a == b; // false
+
+boolean e = true;
+boolean f = true;
+
+e == f; // true
+
+e != f // false, они равны
+
+</code></pre></p>
+<h4 id="_13"><a name="user-content-_13" href="#_13" class="headeranchor-link" aria-hidden="true"><span class="headeranchor"></span></a>Математические операторы</h4>
+<p>Их всего 2: <code>больше</code> и <code>меньше</code>; так же у кажого есть вариации со знаком равно: <code>больше или равно</code> и <code>меньше или равно</code>. Оператор, так же как и в реальном мире, применим только к числам: <code>int</code>, <code>double</code>.</p>
+<p>Записываются так же как и в математике:</p>
+<p>Пример 8:<br />
+<pre><code class="java">int a = 1;
+int b = 2;
+
+a &lt; b; // true
+a &lt;= b; // true
+a &gt; b; // false
+a &gt;= b; // false
+</code></pre></p>
+<h2 id="_14"><a name="user-content-_14" href="#_14" class="headeranchor-link" aria-hidden="true"><span class="headeranchor"></span></a>Вывод текста на экран</h2>
+<p>Чтобы выводить текст на экран, используется конструкция:</p>
+<pre><code class="java">System.out.println(значение);
+</code></pre>
+
+<p>Важно отметить, как уже было сказано выше, когда мы обращаемся к переменной – мы получаем ее значение. Поэтому </p>
+<pre><code class="java">int a = 1;
+a == 1; // true, заначние переменной равно 1
+</code></pre>
+
+<p>Из чего следует, что:</p>
+<pre><code class="java">int a = 1;
+Sytem.out.println(1); // Можно написать значение
+Sytem.out.println(a); // Можно написать значение переменной, обратившись к ней
+Sytem.out.println(&quot;Аллах велик&quot;); // Можно написать значение
+
+</code></pre>
+
+<h2 id="_15"><a name="user-content-_15" href="#_15" class="headeranchor-link" aria-hidden="true"><span class="headeranchor"></span></a>Условные операторы</h2>
+<p>Условный оператор – некая структура, которая, в зависимости от некого условия, выполняет некое действие. (абстрактно-ично!) Давай разберемся.</p>
+<p>Итак, логически можно разделить описание (синтаксис) условного оператора на две части:</p>
+<h3 id="_16"><a name="user-content-_16" href="#_16" class="headeranchor-link" aria-hidden="true"><span class="headeranchor"></span></a>Постановка условия</h3>
+<p>Условие – некое логическое выражение, на основании которого (а точнее его правдивости), оператор понимает, что надо сделать ассоциированное (красивое слово, значащее &ldquo;написанное для него&rdquo;) действие.</p>
+<p>Это может быть, к примеру, переменная типа <code>boolean</code>, либо результат сравнения переменных (смотри <a href="">Пример 8</a>, <code>a &lt; b</code> - это и есть результат сравнения переменных, равный, в данном случае, <code>true</code>).</p>
+<h3 id="_17"><a name="user-content-_17" href="#_17" class="headeranchor-link" aria-hidden="true"><span class="headeranchor"></span></a>Описание действия, если это условие выполнено</h3>
+<p>Описание действия – это некий код (любой длины и вложенности), который будет выполнен <strong>только если условие верно</strong>. Код пишется внутри парных фигурных скобочек: <code>{ // вот тут }</code></p>
+<blockquote>
+<p>Все, что пишется между фигурных скобочек называется <em>скоупом</em> (или телом)</p>
+</blockquote>
+<h3 id="if"><a name="user-content-if" href="#if" class="headeranchor-link" aria-hidden="true"><span class="headeranchor"></span></a>Оператор if</h3>
+<p>Синтаксис</p>
+<p>Пример 9:<br />
+<pre><code class="java">if(условие) {
+   действие;
+}
+</code></pre></p>
+<p>Попробуем написать наш первый условный оператор:</p>
+<p>Пример 10:<br />
+<pre><code class="java">if(true) { // Условие всегда правда
+   System.out.println(&quot;Аллах велик&quot;); // Аллах всегда велик (условие всегда правда), поэтому скажем же об этом!
+}
+</code></pre></p>
+<p>Усложним условие:</p>
+<p>Пример 11:<br />
+<pre><code class="java">boolean isAllahVelik = true;
+if(isAllahVelik == true) { // Равно ли !значение! переменной isAllahVelik true
+   System.out.println(&quot;Аллах велик&quot;); // Аллах велик (условие выполнено), поэтому скажем же об этом!
+}
+</code></pre></p>
+<p>Поменяем условие условие:</p>
+<p>Пример 12:<br />
+<pre><code class="java">int catsNumber = 5;
+int dogsNumber = 5;
+if(catsNumber == dogsNumber) { // Равно ли !значение! переменной catsNumber значению переменной dogsNumber
+   System.out.println(&quot;У каждой животинки есть пара!&quot;); // Условие выполнено, напишем, что у всех есть друг
+}
+</code></pre></p>
+<h3 id="else"><a name="user-content-else" href="#else" class="headeranchor-link" aria-hidden="true"><span class="headeranchor"></span></a>Оператор else</h3>
+<p>Оператор, который используется в паре с <code>if</code>. Логически имеет смысл &ldquo;в противном случае&rdquo;, что подразумевает &ldquo;если условие оператора <code>if</code> не выполнено, то&rdquo;.</p>
+<p>Пример 13:<br />
+<pre><code class="java">if(false) { // Условие всегда ложь
+   // Никогда не выполнится
+}
+else {
+   // Условие оператора if не выполнено, поэтому будет исполнен код, находящийся в этом скоупе
+}
+</code></pre></p>
+<p>Чуть более реальный пример:</p>
+<p>Пример 14:<br />
+<pre><code class="java">int catsNumber = 5;
+int dogsNumber = 6;
+if(catsNumber == dogsNumber) { // Равно ли !значение! переменной catsNumber значению переменной dogsNumber. 
+   System.out.println(&quot;У каждой животинки есть пара!&quot;); // Условие не выполнено, код не выполнится
+}
+else {
+   // Условие выполнено, так как значение catsNumber не равно значению dogsNumber
+   Sytem.out.println(&quot;Надо срочно найти еще одну животинку, что бы никто не скучал&quot;); // Выполнится
+}
+</code></pre></p>
+<h3 id="else-if"><a name="user-content-else-if" href="#else-if" class="headeranchor-link" aria-hidden="true"><span class="headeranchor"></span></a>Оператор else if</h3>
+<p>Это комбинация между <code>if</code> и <code>else</code>, который, так же как и <code>else</code> может использоваться только в паре с <code>if</code>. Его можно прочитать как &ldquo;в противном случае, если&rdquo;. </p>
+<p>Пример 15:<br />
+<pre><code class="java">int number = 2;
+if(number == 1) { // Если число равно 1
+   System.out.println(&quot;Один&quot;); // Не выполнится, так как условие не выполнено
+}
+/*
+  В противном случае (то есть, если первое условие не правда), если число равно 2
+*/
+else if(number == 2) {
+    System.out.println(&quot;Два&quot;); // Условие выполнено (правда), код в этом скоупе (между {}) выполнится
+}
+</code></pre></p>
+<p>В <a href="">Пример 15</a> если смысловой недочет: а что будет, если <code>number</code> равен 3? Первое условие не выполнется, так как 3 == 1 – это ложь, и второе условие тоже не выполнится, так как 2 == 1. Проблема в том, что программа тогда не напишет ничего! А мы хотим, чтобы если это не 1 или 2, тогда выводить на экран &ldquo;Неизвестное число&rdquo;. </p>
+<p>Решение этой проблемы – добавить оператор <code>else</code> после <code>else if</code>. Тогда целиком можно выражение будет прочитать как &ldquo;если (условие1) – сделай действие1, в противном случае если (условие 2) – сделай действие2. В противном случае (ни одно из условий не правда) – сделай действие 3&rdquo;</p>
+<p>Пример 16:<br />
+<pre><code class="java">
+
+</code></pre></p></article></body></html>
