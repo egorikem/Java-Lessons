@@ -8,6 +8,7 @@
 
 + [Переменные](./variables.md)
 + [Условные операторы](./logical_controll_statements.md)
++ [Циклы](./loops.md)
 + [Функции](./functions.md)
 + [Массивы](./arrays.md)
 
