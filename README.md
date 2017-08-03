@@ -4,10 +4,10 @@
 
 
 + [Вводный урок]()
-+ [Переменные](./master/variables.md)
-+ [Условные операторы](./master/logical_controll_statements.md)
-+ [Функции](./master/functions.md)
-+ [Массивы](./master/arrays.md)
++ [Переменные](./variables.md)
++ [Условные операторы](./logical_controll_statements.md)
++ [Функции](./functions.md)
++ [Массивы](./arrays.md)
 
 ## Вводный урок
 
